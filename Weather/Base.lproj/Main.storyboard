@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,198 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ODR91O0" translatesAutoresizingMaskIntoConstraints="NO" id="saf-NU-BLa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INDIA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o70-CL-lbN">
+                                <rect key="frame" x="266" y="68" width="69" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="O92-GT-Izz"/>
+                                    <constraint firstAttribute="width" constant="69" id="fDk-yK-buF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbh-V8-dYg">
+                                <rect key="frame" x="189" y="20" width="223" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="PCz-Zo-s9c">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="4fA-K7-ysK"/>
+                                            <constraint firstAttribute="width" constant="47" id="Ehj-BK-rFe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JABALPUR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SG-lT-pkW">
+                                        <rect key="frame" x="47" y="0.0" width="176" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="Kpd-tB-c8o"/>
+                                            <constraint firstAttribute="width" constant="176" id="VBn-CB-7tO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ADR-ER-6eB">
+                                <rect key="frame" x="13" y="125" width="600" height="290"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03d" translatesAutoresizingMaskIntoConstraints="NO" id="dxo-fA-bkS">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="290"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="321" id="YJ2-cq-JzQ"/>
+                                            <constraint firstAttribute="height" constant="185" id="feK-tA-Onq"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="YJ2-cq-JzQ"/>
+                                                <exclude reference="feK-tA-Onq"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kwX-qh-nsW">
+                                        <rect key="frame" x="300" y="77" width="300" height="137"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOUDY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOA-LC-Rpu">
+                                                <rect key="frame" x="76" y="0.0" width="149" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="58" id="ZgZ-3Y-eho"/>
+                                                    <constraint firstAttribute="width" constant="237" id="txB-NA-v3U"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="39"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="ZgZ-3Y-eho"/>
+                                                        <exclude reference="txB-NA-v3U"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfY-3u-VbH">
+                                                <rect key="frame" x="88" y="46" width="125" height="91"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="126" id="BGQ-1l-0In"/>
+                                                    <constraint firstAttribute="height" constant="109" id="Pim-J5-wdI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="78"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="BGQ-1l-0In"/>
+                                                        <exclude reference="Pim-J5-wdI"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCS-iV-Vbp">
+                                <rect key="frame" x="437" y="453" width="143" height="53"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humidity" translatesAutoresizingMaskIntoConstraints="NO" id="rBN-Zl-l7r">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="Kc2-zg-hnM"/>
+                                            <constraint firstAttribute="width" constant="64" id="zGb-Ta-34n"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="76%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhj-zX-xdg">
+                                        <rect key="frame" x="64" y="0.0" width="79" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="BeD-sA-fFI"/>
+                                            <constraint firstAttribute="width" constant="79" id="oNZ-Yn-uiF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="27"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4tb-Rl-WpK">
+                                <rect key="frame" x="385" y="519" width="195" height="61"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windspeed" translatesAutoresizingMaskIntoConstraints="NO" id="RuN-nG-49g">
+                                        <rect key="frame" x="0.0" y="0.0" width="89" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="89" id="V9I-8o-YmU"/>
+                                            <constraint firstAttribute="height" constant="61" id="mLE-9Q-KrA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="95 km/h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k97-QV-Pec">
+                                        <rect key="frame" x="89" y="0.0" width="106" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="SeF-2U-nB8"/>
+                                            <constraint firstAttribute="width" constant="106" id="o0N-3b-uXv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="27"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4tb-Rl-WpK" firstAttribute="top" secondItem="WCS-iV-Vbp" secondAttribute="bottom" constant="13" id="0lp-Yd-yoz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4tb-Rl-WpK" secondAttribute="bottom" constant="20" id="1Ua-pG-6Dd"/>
+                            <constraint firstItem="4tb-Rl-WpK" firstAttribute="top" secondItem="WCS-iV-Vbp" secondAttribute="bottom" constant="8" id="3Sa-ht-Fng"/>
+                            <constraint firstItem="ADR-ER-6eB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Us-p5-Kmp"/>
+                            <constraint firstItem="4tb-Rl-WpK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4Kl-P5-wRh"/>
+                            <constraint firstItem="o70-CL-lbN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="AVk-Qx-JcY"/>
+                            <constraint firstItem="saf-NU-BLa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BJz-d1-Lax"/>
+                            <constraint firstAttribute="trailing" secondItem="ADR-ER-6eB" secondAttribute="trailing" id="Bly-q2-02y"/>
+                            <constraint firstItem="o70-CL-lbN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DbP-AD-euq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="saf-NU-BLa" secondAttribute="bottom" id="IXd-Nv-20F"/>
+                            <constraint firstItem="Gbh-V8-dYg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Jxg-LL-WlW"/>
+                            <constraint firstItem="WCS-iV-Vbp" firstAttribute="top" secondItem="ADR-ER-6eB" secondAttribute="bottom" constant="38" id="LyC-6d-kwQ"/>
+                            <constraint firstItem="Gbh-V8-dYg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MNU-F2-3Vx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WCS-iV-Vbp" secondAttribute="trailing" constant="7" id="N2D-Y2-4mT"/>
+                            <constraint firstItem="WCS-iV-Vbp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Nji-g5-VXw"/>
+                            <constraint firstAttribute="trailing" secondItem="saf-NU-BLa" secondAttribute="trailing" id="QvC-3d-tMy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4tb-Rl-WpK" secondAttribute="bottom" constant="86" id="TJ7-XE-idF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4tb-Rl-WpK" secondAttribute="trailing" constant="7" id="WNK-VM-UxH"/>
+                            <constraint firstItem="ADR-ER-6eB" firstAttribute="top" secondItem="o70-CL-lbN" secondAttribute="bottom" constant="19" id="azS-dj-SN0"/>
+                            <constraint firstItem="Gbh-V8-dYg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="169" id="ehy-wC-Vqa"/>
+                            <constraint firstItem="Gbh-V8-dYg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nui-Ct-TGm"/>
+                            <constraint firstItem="saf-NU-BLa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="p1E-zw-LQw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gbh-V8-dYg" secondAttribute="trailing" constant="168" id="xrY-r2-xKZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ehy-wC-Vqa"/>
+                                <exclude reference="nui-Ct-TGm"/>
+                                <exclude reference="xrY-r2-xKZ"/>
+                                <exclude reference="TJ7-XE-idF"/>
+                                <exclude reference="N2D-Y2-4mT"/>
+                                <exclude reference="3Sa-ht-Fng"/>
+                                <exclude reference="WNK-VM-UxH"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="humidityLbl" destination="jhj-zX-xdg" id="6aG-EI-P3s"/>
+                        <outlet property="mainDescLbl" destination="NOA-LC-Rpu" id="aTb-5D-h82"/>
+                        <outlet property="temperatureLbl" destination="wfY-3u-VbH" id="Pbi-La-lI1"/>
+                        <outlet property="weatherImg" destination="dxo-fA-bkS" id="Yua-TG-BbP"/>
+                        <outlet property="windSpeedLbl" destination="k97-QV-Pec" id="8yP-PT-L9p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="360" y="388"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="03d" width="460" height="290"/>
+        <image name="ODR91O0" width="4288" height="4833"/>
+        <image name="humidity" width="369" height="453"/>
+        <image name="location" width="425" height="524"/>
+        <image name="windspeed" width="282" height="188"/>
+    </resources>
 </document>

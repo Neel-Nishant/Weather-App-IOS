@@ -9,17 +9,36 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var temperatureLbl: UILabel!
+    @IBOutlet weak var windSpeedLbl: UILabel!
+    @IBOutlet weak var humidityLbl: UILabel!
+    @IBOutlet weak var mainDescLbl: UILabel!
+    
+    @IBOutlet weak var weatherImg: UIImageView!
+    var weather: Weather!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        weather = Weather()
+        weather.downloadWeatherDetails { () -> () in
+            self.updateUI()
+        }
+        
+       
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   
+    func updateUI(){
+        temperatureLbl.text = "\(weather.temperature)º"
+        windSpeedLbl.text = "\(weather.windSpeed)m/s"
+        humidityLbl.text = "\(weather.humidity)%"
+        mainDescLbl.text = weather.mainDesc
+        weatherImg.image = UIImage(named: "\(weather.icon)")
+        print("main: \(weather.mainDesc)")
+        print("icon: \(weather.icon)")
+        print("temp: \(weather.temperature)")
+        print("humidity: \(weather.humidity)")
+        print("windspeed: \(weather.windSpeed)")
     }
-
-
 }
 
